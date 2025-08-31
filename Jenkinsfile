@@ -3,10 +3,10 @@ pipeline {
 
     environment {
         DOCKER_REGISTRY = "https://registry-1.docker.io/v1/"
-        BACKEND_IMAGE = "yagya123/backend"
-        FRONTEND_IMAGE   = "yagya123/frontend"
-        BACKEND_TAG   = "v1"
-        FRONTEND_TAG     = "v1"
+        BACKEND_IMAGE   = "yagya123/backend"
+        FRONTEND_IMAGE  = "yagya123/frontend"
+        BACKEND_TAG     = "v1"
+        FRONTEND_TAG    = "v1"
     }
 
     stages {
@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage('Build & Push backend Image') {
+        stage('Build & Push Backend Image') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'gitlab-docker-creds',
                                                  usernameVariable: 'DOCKER_USER',
@@ -46,4 +46,5 @@ pipeline {
                 }
             }
         }
+    }
 }
