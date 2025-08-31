@@ -6,7 +6,7 @@ pipeline {
         BACKEND_IMAGE = "yagya123/backend"
         FRONTEND_IMAGE   = "yagya123/frontend"
         BACKEND_TAG   = "v1"
-        BACKEND_TAG     = "v1"
+        FRONTEND_TAG     = "v1"
     }
 
     stages {
